@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<!-- 	// <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+ //    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+ //    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script>
+ //    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
+ //    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-cookies.min.js"></script> -->
+
+	<script type="text/javascript">
+		(function myFunction(){
+			app = angular.module('store2', [ ]);
+
+			app.controller('StoreController', function(){
+				this.product = gem;
+			});
+
+			gem = {
+				name: 'Dodecahedron',
+				price: 2.95,
+				description: 'Fancy description goes here',
+			};
+
+
+		})();
+
+		myApp = angular.module('myApp',[]);
+
+		myApp.controller('GreetingController', function() {
+		  this.greeting = 'Hola!';
+		});
+	</script>
+
+</head>
+
+<body>
+<!-- 	<div ng-app="myApp" ng-controller="GreetingController as gc">
+	  {{ gc.greeting }}
+	</div> -->
+
+	<div ng-app="store2" ng-controller="StoreController as store">
+		<h1> {{store.product.name}}</h1>
+		<h2> ${{store.product.price}}</h2>
+		<p> {{store.product.description}} </p>
+	</div>
+
+
+
+</body>
+</html>

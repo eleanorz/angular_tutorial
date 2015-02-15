@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<!-- 	<div ng-app="">
+		<p>Input Eleanor in the input box and I'll repeat whatever you type:</p>
+		<p>Name: <input type="text" ng-model="name" value="John"></p>
+		<p ng-bind="name"></p>
+	</div> -->
+<!-- 	<div ng-app="" ng-init="quantity=1;price=5">
+
+		Quantity: <input type="number"	ng-model="quantity">
+		Costs:    <input type="number" ng-model="price">
+
+		Total in dollar: {{ quantity * price }}
+	</div> -->
+
+	<div ng-app="" ng-init="mass=50;velocity=35">
+		Momentum is mass multiplied by velocity,
+		Mass in kg: <input type="number" ng-model="mass">
+		velocity in km per hour: <input type="number" ng-model="velocity">
+
+		Total Speed in kg-m/seconds: {{ mass * velocity * 1000 / 60 }}
+	</div>
+
+</body>
+</html>
